@@ -1,0 +1,36 @@
+{
+  "name": "jqb-random",
+  "version": "0.1.0",
+  "description": "randomization library",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jQbrick/jqb-random"
+  },
+  "keywords": [
+    "array",
+    "isarray",
+    "test",
+    "jqbrick"
+  ],
+  "author": {
+    "name": "Marco Pegoraro",
+    "url": "http://movableapp.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jQbrick/jqb-random/issues"
+  },
+  "homepage": "https://github.com/jQbrick/jqb-random",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-mocha-chai-sinon": "~0.0.8",
+    "grunt-contrib-watch": "~0.6.1"
+  },
+  "dependencies": {
+    "jqb-isarray": "~0.1.0"
+  }
+}
