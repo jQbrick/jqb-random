@@ -1,7 +1,7 @@
 
 var random = require('../index');
 
-describe('jqb-isarray :: integer()', function() {
+describe('jqb-random :: integer()', function() {
     
     it('should return a random integer', function() {
         expect(

@@ -31,13 +31,43 @@ exports.integer = function (min, max) {
     return this.random(min,max);
 };
 
+
+/**
+ * RANDOM INDEX FROM SCALAR ARRAY
+ */
+exports.index = function(arr) {
+    if (typeof arr === 'string' || isArray(arr)){
+        return this.integer(arr.length - 1);
+    } else {
+        return -1;
+    }
+}
+
+
 /**
  * RANDOM ITEM FROM SCALAR ARRAY
  */
 exports.item = function(arr) {
     if (typeof arr === 'string' || isArray(arr)){
-        return arr[this.random(0, arr.length - 1)];
+        return arr[this.index(arr)];
     } else {
         return -1;
     }
 };
+
+
+/**
+ * RETURN A RANDOM SELECTION FROM THE GIVEN ARRAY
+ * it return a new array with the random selection
+ * it does not modify the original array
+ */
+exports.selection = function(arr, num) {
+    var _arr = Array.prototype.slice.call(arr);
+    var selection = [];
+    for (var i=0; i<num; i++) {
+        var idx = this.item(_arr);
+        selection.push(_arr.splice(idx, 1).shift());
+    }
+    return selection;
+};
+

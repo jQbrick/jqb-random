@@ -1,7 +1,7 @@
 
 var random = require('../index');
 
-describe('jqb-isarray :: item()', function() {
+describe('jqb-random :: item()', function() {
     
     it('should return a random item from a given array', function() {
         var testArray = ['apple','microsoft','ibm','next','hp'];
