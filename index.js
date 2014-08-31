@@ -65,7 +65,7 @@ exports.selection = function(arr, num) {
     var _arr = Array.prototype.slice.call(arr);
     var selection = [];
     for (var i=0; i<num; i++) {
-        var idx = this.item(_arr);
+        var idx = this.index(_arr);
         selection.push(_arr.splice(idx, 1).shift());
     }
     return selection;
